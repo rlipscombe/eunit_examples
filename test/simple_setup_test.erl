@@ -17,7 +17,9 @@ simple_setup_test_() ->
     {setup, fun suite_setup/0, fun suite_cleanup/1, [
         fun pass/0,
         fun() -> ?assert(true) end,
-        ?_assert(true)
+        ?_assert(true),
+        {"description", ?_assert(true)},
+        {<<"also a binary">>, ?_assert(true)}
     ]}.
 
 pass() -> ?assert(true).
