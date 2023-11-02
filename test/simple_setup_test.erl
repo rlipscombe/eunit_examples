@@ -37,3 +37,11 @@ not_member_test() ->
     % The ?debugHere macro prints out the file, line and pid; you can see it being output twice.
     ?debugHere,
     ok.
+
+single_fun_setup_test_() ->
+    {setup, fun setup/0, fun cleanup/1,
+        % The 'setup' generator can take a single fun/0 rather than a list.
+        fun table_exists/0}.
+
+table_exists() ->
+    ?assertNotEqual(undefined, ets:info(?TABLE)).
