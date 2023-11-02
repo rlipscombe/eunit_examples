@@ -16,11 +16,8 @@
 ]).
 
 multiply_two_numbers_test() ->
-    ?assertEqual(6, mul(2, 3)).
+    ?assertEqual(6, calculator:multiply(2, 3)).
 
 %% For convenience, eunit.hrl also injects a test() function:
 test() ->
     eunit:test(?MODULE).
-
-%% This is the function under test.
-mul(A, B) -> A * B.
