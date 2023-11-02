@@ -45,3 +45,7 @@ single_fun_setup_test_() ->
 
 table_exists() ->
     ?assertNotEqual(undefined, ets:info(?TABLE)).
+
+no_cleanup_test_() ->
+    % 'Cleanup' is optional. Because ETS tables are automatically deleted when the owning process dies, we can omit it.
+    {setup, fun setup/0, fun table_exists/0}.
