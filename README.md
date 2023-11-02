@@ -10,3 +10,4 @@ Install Rebar3 and then `rebar3 eunit`.
 
 - `explicit_test` -- demonstrates what `eunit.hrl` does for you, by not using it.
 - `name_suffix_test` -- the use of `..._test()` and `..._test_()` naming.
+- `list_generator_test` -- using a test generator that returns a list.
