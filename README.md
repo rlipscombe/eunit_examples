@@ -5,3 +5,7 @@ EUnit examples, to go with the blog post at <https://blog.differentpla.net/blog/
 ## Running the tests
 
 Install Rebar3 and then `rebar3 eunit`.
+
+## Examples
+
+- `explicit_test` -- demonstrates what `eunit.hrl` does for you, by not using it.
